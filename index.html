@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Replit</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+  />
+
+  <body>
+    <div id="cabeçalho">
+      <div>
+        <ul>
+          <div id="botoes">
+            <li class="text"><a href="#secao1">Home</a></li>
+            <li class="text"><a href="#secao2">Projetos</a></li>
+            <li class="text"><a href="#secao3">Sobre</a></li>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </body>
+  <div id="secao1" class="card center-content">
+    <i class="bi bi-person-circle"></i>
+    <h1>Gustavo Alves</h1>
+    <h2>Desenvolvedor web</h2>
+    <p>sei la</p>
+    <button class="buton"><a href="#secao2">Ver meus Projetos</a></button>
+  </div>
+
+  <div id="secao2" class="card center-content">
+    
+    <h1>Projetos</h1>
+    <p>sei la</p>
+    <br/>
+    
+    <div id="aling">
+      
+    <div class="cartao">
+      <h1>Portifolio Pessoal</h1>
+      <p>maiknmsnasdinaudbsbc
+        jcbusbciusbcusycbs8c</p>
+      
+      <button><a href="secao3">Contatos</a></button>
+    </div><span></span>
+
+    <div class="cartao">
+      <h1>Loja Virtual</h1>
+      <p>dsadsadsafsdfsdafgfdg
+        safds\\\\\\\sdfasdfdsfd</p>
+      
+      <button><a href="secao3">Contatos</a></button>
+    </div>
+
+    <div class="cartao">
+      <h1>Dashborad de Dados</h1>
+      <p>gdhsjvgashgdghjsgjvbchsvb
+        cysvbshvbtsav cgsyt</p>
+      
+      <button><a href="secao3">Contatos</a></button>
+    </div>
+  
+  </div>
+
+  <div id="secao3" class="card center-content">
+    <h1>Contatos</h1>
+    <p>sei la</p>
+
+    <form id="whatsappForm">
+      <input type="text" id="nome" placeholder="Seu nome" required />
+     
+        <input type="email" id="email" placeholder="Seu email" required />
+
+      <textarea id="mensagem" placeholder="Digite sua mensagem" required></textarea>
+
+      <button type="submit">Enviar no Whatsapp</button>
+        
+    </form>
+<br><br><br><br>
+
+    <div class="social-links">
+      <p>Me siga nas redes sociais</p>
+      <a href="https://youtube.com" target="_blank">YouTube   </a>
+       <a href="https://instagram.com" target="_blank">Instagram   </a>
+       <a href="https://facebook.com" target="_blank">Facebook  </a>
+    </div>
+  </div>
+
+    <script>
+      document.getElementById("whatsappForm").addEventListener("submit", function(e){
+        e.preventDefault();
+        const nome = document.getElementById("nome").value
+        const email = document.getElementById("email").value 
+        const mensagem = document.getElementById("mensagem").value
+
+        const texto = `Olá, meu nome é ${nome} (${email}) e gostaria de falar: ${mensagem}`;
+        const url = `https://wa.me/5527999557919?text=${encodeURIComponent(texto)}`;
+
+        window.open(url, "_blank");     
+      });
+    </script>
+</html>
